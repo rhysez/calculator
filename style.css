@@ -1,0 +1,84 @@
+body, html {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 25%, rgba(45,94,253,1) 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100%;
+
+}
+
+#input{
+    height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: large;
+    width: 331px;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: 30px;
+    border: solid black 2.5px;
+    background-color: black;
+}
+
+.inputBar {
+    color: white;
+    font-weight: bold;
+}
+
+#buttonList {
+    display: flex;
+    width: 350px;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+#container {
+    border: solid black 5px;
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 290px;
+    background-color: slategray;
+}
+
+#button0,
+#button1,
+#button2,
+#button3,
+#button4,
+#button5,
+#button6,
+#button7,
+#button8,
+#button9,
+#buttonDot,
+#buttonEquals,
+#buttonAdd,
+#buttonSubtract,
+#buttonMultiply,
+#buttonDivide,
+#buttonBack {
+    border: solid black 1px;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+h1 {
+    color: white;
+    background-color: darkblue;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
