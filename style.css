@@ -17,7 +17,7 @@ body, html {
     height: 50px;
     margin-top: 25px;
     margin-left: 30px;
-    background-color: oldlace;
+    background-color: snow;
 }
 
 .inputBar {
@@ -42,8 +42,8 @@ body, html {
     width: 360px;
     height: 500px;
     margin: auto;
-    margin-top: 100px;
-    margin-bottom: 290px;
+    margin-top: 150px;
+    margin-bottom: 200px;
     background-color: rgb(41, 41, 41);
 }
 
@@ -59,13 +59,23 @@ body, html {
     font-weight: bold;
 }
 
+#buttonEquals {
+    background-color: lightgreen;
+}
+
+
 h1 {
-    color: rgb(250, 173, 30);
+    color: lightgreen;
     background-color: rgb(41, 41, 41);
-    width: 200px;
+    width: 170px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
     padding: 10px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 25px;
 }
