@@ -26,58 +26,78 @@ const buttons = {
     "buttonDivide": document.getElementById("buttonDivide"),
     "buttonEquals": document.getElementById("buttonEquals"),
 }
+// stores user choices
+let choices = [];
 
+// user displayed input
 let displayInput = document.querySelector(".inputBar");
 
-// buttons to return a string
+// buttons display a string on click, adds number to choices[]
 buttons.button0.addEventListener("click", () => {
     displayInput.textContent += "0";
+    choices.push(0);
 });
 buttons.button1.addEventListener("click", () => {
     displayInput.textContent += "1";
+    choices.push(1);
 });
 buttons.button2.addEventListener("click", () => {
     displayInput.textContent += "2";
+    choices.push(2);
 });
 buttons.button3.addEventListener("click", () => {
     displayInput.textContent += "3";
+    choices.push(3);
 });
 buttons.button4.addEventListener("click", () => {
     displayInput.textContent += "4";
+    choices.push(4);
 });
 buttons.button5.addEventListener("click", () => {
     displayInput.textContent += "5";
+    choices.push(5);
 });
 buttons.button6.addEventListener("click", () => {
     displayInput.textContent += "6";
+    choices.push(6);
 });
 buttons.button7.addEventListener("click", () => {
     displayInput.textContent += "7";
+    choices.push(7);
 });
 buttons.button8.addEventListener("click", () => {
     displayInput.textContent += "8";
+    choices.push(8);
 });
 buttons.button9.addEventListener("click", () => {
     displayInput.textContent += "9";
+    choices.push(9);
 });
 buttons.buttonDel.addEventListener("click", () => {
     displayInput.textContent = "";
+    choices.length = 0;
 });
 buttons.buttonDot.addEventListener("click", () => {
     displayInput.textContent += ".";
+    choices.push(".");
 });
 buttons.buttonAdd.addEventListener("click", () => {
     displayInput.textContent += "+";
+    choices.push("+");
 });
 buttons.buttonSubtract.addEventListener("click", () => {
     displayInput.textContent += "-";
+    choices.push("-");
 });
 buttons.buttonMultiply.addEventListener("click", () => {
     displayInput.textContent += "x";
+    choices.push("*");
 });
 buttons.buttonDivide.addEventListener("click", () => {
     displayInput.textContent += "/";
+    choices.push("/");
 });
 buttons.buttonEquals.addEventListener("click", () => {
     console.log("=")
+    choices.push("=");
 });

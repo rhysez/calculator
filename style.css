@@ -59,15 +59,34 @@ body, html {
     background-color: rgb(218, 217, 217);
     color: black;
     font-weight: bold;
+    font-size: larger;
+    border: none;
+}
+
+.buttons:hover {
+    background-color: white;
+    font-size: x-large;
 }
 
 #buttonEquals {
     background-color: lightgreen;
 }
 
+#buttonDel {
+    color: green;
+}
+
+#buttonDot,
+#buttonAdd,
+#buttonSubtract,
+#buttonMultiply,
+#buttonDivide {
+    background-color: lightsalmon;
+}
+
 
 h1 {
-    color: lightgreen;
+    color: snow;
     background-color: rgb(41, 41, 41);
     width: 170px;
     text-align: center;
@@ -81,3 +100,4 @@ h3 {
     text-align: center;
     margin-bottom: 25px;
 }
+
