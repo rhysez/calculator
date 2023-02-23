@@ -6,9 +6,6 @@ function calculate(a, b, operator){
     else if (operator === "/") return a / b;
 }
 
-// stores the number from the input bar
-//let displayValue = document.querySelector(".inputBar").innerHTML;
-
 // stores refs to buttons
 const buttons = {
     "button0": document.getElementById("button0"),
@@ -30,54 +27,56 @@ const buttons = {
     "buttonEquals": document.getElementById("buttonEquals"),
 }
 
+let displayInput = document.querySelector(".inputBar");
+
 // buttons to return a string
 buttons.button0.addEventListener("click", () => {
-    console.log("0")
+    displayInput.textContent += "0";
 });
 buttons.button1.addEventListener("click", () => {
-    console.log("1")
+    displayInput.textContent += "1";
 });
 buttons.button2.addEventListener("click", () => {
-    console.log("2")
+    displayInput.textContent += "2";
 });
 buttons.button3.addEventListener("click", () => {
-    console.log("3")
+    displayInput.textContent += "3";
 });
 buttons.button4.addEventListener("click", () => {
-    console.log("4")
+    displayInput.textContent += "4";
 });
 buttons.button5.addEventListener("click", () => {
-    console.log("5")
+    displayInput.textContent += "5";
 });
 buttons.button6.addEventListener("click", () => {
-    console.log("6")
+    displayInput.textContent += "6";
 });
 buttons.button7.addEventListener("click", () => {
-    console.log("7")
+    displayInput.textContent += "7";
 });
 buttons.button8.addEventListener("click", () => {
-    console.log("8")
+    displayInput.textContent += "8";
 });
 buttons.button9.addEventListener("click", () => {
-    console.log("9")
+    displayInput.textContent += "9";
 });
 buttons.buttonDel.addEventListener("click", () => {
-    console.log("del")
+    displayInput.textContent = "";
 });
 buttons.buttonDot.addEventListener("click", () => {
-    console.log(".")
+    displayInput.textContent += ".";
 });
 buttons.buttonAdd.addEventListener("click", () => {
-    console.log("+")
+    displayInput.textContent += "+";
 });
 buttons.buttonSubtract.addEventListener("click", () => {
-    console.log("-")
+    displayInput.textContent += "-";
 });
 buttons.buttonMultiply.addEventListener("click", () => {
-    console.log("*")
+    displayInput.textContent += "x";
 });
 buttons.buttonDivide.addEventListener("click", () => {
-    console.log("/")
+    displayInput.textContent += "/";
 });
 buttons.buttonEquals.addEventListener("click", () => {
     console.log("=")

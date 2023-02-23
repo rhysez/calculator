@@ -23,6 +23,8 @@ body, html {
 .inputBar {
     color: black;
     font-weight: bold;
+    font-size: xx-large;
+    margin-right: 10px;
 }
 
 #buttonList {
