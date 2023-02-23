@@ -1,4 +1,4 @@
-// calculates two numbers
+// calculates the user's choices
 function calculate(a, operator, b){
     if (operator === "+") return a + b;
     else if (operator === "-") return a - b;
@@ -28,12 +28,15 @@ const buttons = {
 }
 // stores user button choices
 let choices = [];
+let operators = [];
+
+let firstChoice = choices[0];
+let lastChoice = choices[1];
 
 // user displayed input
 let displayInput = document.querySelector(".inputBar");
 
 // buttons display a string on click, adds number to choices[]
-// may need to push operators to choices[] in future, currently only numbers are pushed
 buttons.button0.addEventListener("click", () => {
     displayInput.textContent += "0";
     choices.push(0);
@@ -86,31 +89,36 @@ buttons.button9.addEventListener("click", () => {
 buttons.buttonDel.addEventListener("click", () => {
     displayInput.textContent = "";
     choices.length = 0;
+    operators.length = 0;
 });
 buttons.buttonDot.addEventListener("click", () => {
+    displayInput.textContent = "I do nothing!";
+    displayInput.style.color = "black";
 });
 buttons.buttonAdd.addEventListener("click", () => {
     displayInput.textContent += "+";
-    choices.push("+")
+    operators.push("+")
     displayInput.style.color = "black";
 });
 buttons.buttonSubtract.addEventListener("click", () => {
     displayInput.textContent += "-";
-    choices.push("-");
+    operators.push("-");
     displayInput.style.color = "black";
 });
 buttons.buttonMultiply.addEventListener("click", () => {
     displayInput.textContent += "x";
-    choices.push("*")
+    operators.push("*")
     displayInput.style.color = "black";
 });
 buttons.buttonDivide.addEventListener("click", () => {
     displayInput.textContent += "/";
-    choices.push("/")
+    operators.push("/")
     displayInput.style.color = "black";
 });
+
+// invokes calculate() with arguments
 buttons.buttonEquals.addEventListener("click", () => {
-    displayInput.textContent = calculate(choices[0], choices[1], choices[2]);
+    displayInput.textContent = calculate(choices[0], operators[0], choices[1]);
     displayInput.style.color = "green";
 });
 
