@@ -1,5 +1,5 @@
 // calculates two numbers
-function calculate(a, b, operator){
+function calculate(a, operator, b){
     if (operator === "+") return a + b;
     else if (operator === "-") return a - b;
     else if (operator === "*") return a * b;
@@ -41,38 +41,47 @@ buttons.button0.addEventListener("click", () => {
 buttons.button1.addEventListener("click", () => {
     displayInput.textContent += "1";
     choices.push(1);
+    displayInput.style.color = "black";
 });
 buttons.button2.addEventListener("click", () => {
     displayInput.textContent += "2";
     choices.push(2);
+    displayInput.style.color = "black";
 });
 buttons.button3.addEventListener("click", () => {
     displayInput.textContent += "3";
     choices.push(3);
+    displayInput.style.color = "black";
 });
 buttons.button4.addEventListener("click", () => {
     displayInput.textContent += "4";
     choices.push(4);
+    displayInput.style.color = "black";
 });
 buttons.button5.addEventListener("click", () => {
     displayInput.textContent += "5";
     choices.push(5);
+    displayInput.style.color = "black";
 });
 buttons.button6.addEventListener("click", () => {
     displayInput.textContent += "6";
     choices.push(6);
+    displayInput.style.color = "black";
 });
 buttons.button7.addEventListener("click", () => {
     displayInput.textContent += "7";
     choices.push(7);
+    displayInput.style.color = "black";
 });
 buttons.button8.addEventListener("click", () => {
     displayInput.textContent += "8";
     choices.push(8);
+    displayInput.style.color = "black";
 });
 buttons.button9.addEventListener("click", () => {
     displayInput.textContent += "9";
     choices.push(9);
+    displayInput.style.color = "black";
 });
 buttons.buttonDel.addEventListener("click", () => {
     displayInput.textContent = "";
@@ -82,20 +91,30 @@ buttons.buttonDot.addEventListener("click", () => {
 });
 buttons.buttonAdd.addEventListener("click", () => {
     displayInput.textContent += "+";
+    choices.push("+")
+    displayInput.style.color = "black";
 });
 buttons.buttonSubtract.addEventListener("click", () => {
     displayInput.textContent += "-";
+    choices.push("-");
+    displayInput.style.color = "black";
 });
 buttons.buttonMultiply.addEventListener("click", () => {
     displayInput.textContent += "x";
+    choices.push("*")
+    displayInput.style.color = "black";
 });
 buttons.buttonDivide.addEventListener("click", () => {
     displayInput.textContent += "/";
+    choices.push("/")
+    displayInput.style.color = "black";
 });
 buttons.buttonEquals.addEventListener("click", () => {
-    console.log("=")
+    displayInput.textContent = calculate(choices[0], choices[1], choices[2]);
+    displayInput.style.color = "green";
 });
 
+// dark mode button
 let pageBody = document.querySelector("body");
 let darkMode = document.getElementById("darkMode");
 let footerText = document.querySelector("h3")
@@ -103,3 +122,4 @@ darkMode.addEventListener("click", () => {
     pageBody.style.background = "black";
     footerText.style.color = "snow";
 });
+
