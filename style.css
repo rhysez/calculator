@@ -1,9 +1,9 @@
-body, html {
+body {
     background: snow;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    margin-top: 0;
     height: 100%;
-
 }
 
 #input{
@@ -45,7 +45,7 @@ body, html {
     height: 500px;
     margin: auto;
     margin-top: 150px;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
     background-color: rgb(41, 41, 41);
 }
 
@@ -84,12 +84,24 @@ body, html {
     background-color: lightsalmon;
 }
 
+#darkMode {
+    margin-left: 875px;
+    border: 0;
+    color: snow;
+    background-color: rgb(41, 41, 41);
+    width: 160px;
+    height: 40px;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 10px;
+}
 
 h1 {
     color: snow;
     background-color: rgb(41, 41, 41);
     width: 170px;
     text-align: center;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
@@ -99,5 +111,6 @@ h1 {
 h3 {
     text-align: center;
     margin-bottom: 25px;
+    margin-top: 50px;
 }
 

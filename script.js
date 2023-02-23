@@ -6,7 +6,7 @@ function calculate(a, b, operator){
     else if (operator === "/") return a / b;
 }
 
-// stores refs to buttons
+// stores DOM button refs
 const buttons = {
     "button0": document.getElementById("button0"),
     "button1": document.getElementById("button1"),
@@ -26,13 +26,14 @@ const buttons = {
     "buttonDivide": document.getElementById("buttonDivide"),
     "buttonEquals": document.getElementById("buttonEquals"),
 }
-// stores user choices
+// stores user button choices
 let choices = [];
 
 // user displayed input
 let displayInput = document.querySelector(".inputBar");
 
 // buttons display a string on click, adds number to choices[]
+// may need to push operators to choices[] in future, currently only numbers are pushed
 buttons.button0.addEventListener("click", () => {
     displayInput.textContent += "0";
     choices.push(0);
@@ -78,26 +79,27 @@ buttons.buttonDel.addEventListener("click", () => {
     choices.length = 0;
 });
 buttons.buttonDot.addEventListener("click", () => {
-    displayInput.textContent += ".";
-    choices.push(".");
 });
 buttons.buttonAdd.addEventListener("click", () => {
     displayInput.textContent += "+";
-    choices.push("+");
 });
 buttons.buttonSubtract.addEventListener("click", () => {
     displayInput.textContent += "-";
-    choices.push("-");
 });
 buttons.buttonMultiply.addEventListener("click", () => {
     displayInput.textContent += "x";
-    choices.push("*");
 });
 buttons.buttonDivide.addEventListener("click", () => {
     displayInput.textContent += "/";
-    choices.push("/");
 });
 buttons.buttonEquals.addEventListener("click", () => {
     console.log("=")
-    choices.push("=");
+});
+
+let pageBody = document.querySelector("body");
+let darkMode = document.getElementById("darkMode");
+let footerText = document.querySelector("h3")
+darkMode.addEventListener("click", () => {
+    pageBody.style.background = "black";
+    footerText.style.color = "snow";
 });
