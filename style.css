@@ -84,8 +84,15 @@ body {
     background-color: lightsalmon;
 }
 
+#darkContainer {
+    display: flex;
+    justify-content: center;
+}
+
 #darkMode {
-    margin-left: 880px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 0;
     color: snow;
     background-color: rgb(41, 41, 41);
