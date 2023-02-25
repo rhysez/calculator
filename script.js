@@ -29,6 +29,7 @@ const buttons = {
 // stores user button choices
 let choices = [];
 let operators = [];
+let tempNumber = "0";
 
 // user displayed input
 let displayInput = document.querySelector(".inputBar");
@@ -36,55 +37,56 @@ let displayInput = document.querySelector(".inputBar");
 // buttons display a string on click, adds number to choices[]
 buttons.button0.addEventListener("click", () => {
     displayInput.textContent += "0";
-    choices.push(0);
+    tempNumber += "0";
 });
 buttons.button1.addEventListener("click", () => {
     displayInput.textContent += "1";
-    choices.push(1);
+    tempNumber += "1";
     displayInput.style.color = "black";
 });
 buttons.button2.addEventListener("click", () => {
     displayInput.textContent += "2";
-    choices.push(2);
+    tempNumber += "2";
     displayInput.style.color = "black";
 });
 buttons.button3.addEventListener("click", () => {
     displayInput.textContent += "3";
-    choices.push(3);
+    tempNumber += "3";
     displayInput.style.color = "black";
 });
 buttons.button4.addEventListener("click", () => {
     displayInput.textContent += "4";
-    choices.push(4);
+    tempNumber += "4";
     displayInput.style.color = "black";
 });
 buttons.button5.addEventListener("click", () => {
     displayInput.textContent += "5";
-    choices.push(5);
+    tempNumber += "5";
     displayInput.style.color = "black";
 });
 buttons.button6.addEventListener("click", () => {
     displayInput.textContent += "6";
-    choices.push(6);
+    tempNumber += "6";
     displayInput.style.color = "black";
 });
 buttons.button7.addEventListener("click", () => {
     displayInput.textContent += "7";
-    choices.push(7);
+    tempNumber += "7";
     displayInput.style.color = "black";
 });
 buttons.button8.addEventListener("click", () => {
     displayInput.textContent += "8";
-    choices.push(8);
+    tempNumber += "8";
     displayInput.style.color = "black";
 });
 buttons.button9.addEventListener("click", () => {
     displayInput.textContent += "9";
-    choices.push(9);
+    tempNumber += "9";
     displayInput.style.color = "black";
 });
 buttons.buttonDel.addEventListener("click", () => {
     displayInput.textContent = "";
+    tempNumber = "0";
     choices.length = 0;
     operators.length = 0;
 });
@@ -92,29 +94,54 @@ buttons.buttonDot.addEventListener("click", () => {
     displayInput.textContent = "I do nothing!";
     displayInput.style.color = "black";
 });
+
+// when operator is pressed, string is converted to number and pushed to choices
+// tempNumber is then emptied, ready for a new string (number) to be entered
+// this solved the problem where I could only calculate single digits
 buttons.buttonAdd.addEventListener("click", () => {
     displayInput.textContent += " + ";
     operators.push(" + ")
+    if(Number(tempNumber)>0) {
+      choices.push(Number(tempNumber));
+      tempNumber = "0";
+    }
     displayInput.style.color = "black";
 });
 buttons.buttonSubtract.addEventListener("click", () => {
     displayInput.textContent += " - ";
     operators.push(" - ");
+    if(Number(tempNumber)>0) {
+      choices.push(Number(tempNumber));
+      tempNumber = "0";
+    }
     displayInput.style.color = "black";
 });
 buttons.buttonMultiply.addEventListener("click", () => {
     displayInput.textContent += " x ";
     operators.push(" * ")
+    if(Number(tempNumber)>0) {
+      choices.push(Number(tempNumber));
+      tempNumber = "0";
+    }
     displayInput.style.color = "black";
 });
 buttons.buttonDivide.addEventListener("click", () => {
     displayInput.textContent += " / ";
     operators.push(" / ")
+    if(Number(tempNumber)>0) {
+      choices.push(Number(tempNumber));
+      tempNumber = "0";
+    }
     displayInput.style.color = "black";
 });
 
 // invokes calculate() with arguments
 buttons.buttonEquals.addEventListener("click", () => {
+    if(Number(tempNumber)>0) {
+      choices.push(Number(tempNumber));
+      tempNumber = "0";
+    }
+    console.log(choices[0],choices[1]);
     displayInput.textContent = calculate(choices[0], operators[0], choices[1]);
     displayInput.style.color = "green";
 });
@@ -126,5 +153,4 @@ let footerText = document.querySelector("h3")
 darkMode.addEventListener("click", () => {
     pageBody.style.background = "black";
     footerText.style.color = "snow";
-});
-
+}); 
