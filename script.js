@@ -1,9 +1,9 @@
 // calculates the user's choices
 function calculate(a, operator, b){
-    if (operator === "+") return a + b;
-    else if (operator === "-") return a - b;
-    else if (operator === "*") return a * b;
-    else if (operator === "/") return a / b;
+    if (operator === " + ") return a + b;
+    else if (operator === " - ") return a - b;
+    else if (operator === " * ") return a * b;
+    else if (operator === " / ") return a / b;
 }
 
 // stores DOM button refs
@@ -29,9 +29,6 @@ const buttons = {
 // stores user button choices
 let choices = [];
 let operators = [];
-
-let firstChoice = choices[0];
-let lastChoice = choices[1];
 
 // user displayed input
 let displayInput = document.querySelector(".inputBar");
@@ -96,23 +93,23 @@ buttons.buttonDot.addEventListener("click", () => {
     displayInput.style.color = "black";
 });
 buttons.buttonAdd.addEventListener("click", () => {
-    displayInput.textContent += "+";
-    operators.push("+")
+    displayInput.textContent += " + ";
+    operators.push(" + ")
     displayInput.style.color = "black";
 });
 buttons.buttonSubtract.addEventListener("click", () => {
-    displayInput.textContent += "-";
-    operators.push("-");
+    displayInput.textContent += " - ";
+    operators.push(" - ");
     displayInput.style.color = "black";
 });
 buttons.buttonMultiply.addEventListener("click", () => {
-    displayInput.textContent += "x";
-    operators.push("*")
+    displayInput.textContent += " x ";
+    operators.push(" * ")
     displayInput.style.color = "black";
 });
 buttons.buttonDivide.addEventListener("click", () => {
-    displayInput.textContent += "/";
-    operators.push("/")
+    displayInput.textContent += " / ";
+    operators.push(" / ")
     displayInput.style.color = "black";
 });
 
