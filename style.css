@@ -1,9 +1,9 @@
 body {
     background: snow;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     margin: 0;
     margin-top: 0;
-    height: 100%;
+    height: 100vh;
 }
 
 #input {
@@ -17,7 +17,7 @@ body {
     height: 50px;
     margin-top: 25px;
     margin-left: 30px;
-    background-color: rgb(255, 244, 181);
+    background-color: rgb(247, 242, 216);
 }
 
 .inputBar {
@@ -39,14 +39,15 @@ body {
 }
 
 #container {
-    border: solid dimgray 2.5px;
-    border-radius: 30px;
     width: 360px;
     height: 500px;
     margin: auto;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    background-color: rgb(41, 41, 41);
+    margin-top: 40px;
+    margin-bottom: 25px;
+    background-color: rgb(155, 153, 153);
+    box-shadow: 10px 5px 5px rgb(52, 51, 51);
+    padding-top: 2.5px;
+    border-radius: 0px;
 }
 
 .buttons {
@@ -69,7 +70,7 @@ body {
 }
 
 #buttonEquals {
-    background-color: lightgreen;
+    background-color: rgb(188, 252, 188);
 }
 
 #buttonDel {
@@ -81,7 +82,8 @@ body {
 #buttonSubtract,
 #buttonMultiply,
 #buttonDivide {
-    background-color: lightsalmon;
+    background-color: rgb(77, 77, 77);
+    color: snow;
 }
 
 #darkContainer {
@@ -95,29 +97,29 @@ body {
     align-items: center;
     border: 0;
     color: snow;
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(88, 88, 88);
     width: 160px;
     height: 40px;
     font-size: larger;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 25px;
 }
 
 h1 {
     color: snow;
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(163, 162, 162);
+    box-shadow: 10px 5px 5px rgb(88, 88, 88);
     width: 200px;
     text-align: center;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 5px;
     padding: 10px;
 }
 
 h3 {
     text-align: center;
     margin-bottom: 25px;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
